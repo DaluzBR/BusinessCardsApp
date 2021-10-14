@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="br.com.daluz.android.apps.businesscards">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".BusinessCardApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BusinessCards">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:authorities="br.com.daluz.android.apps.businesscards.shareBusinessCardProvider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+        </provider>
+    </application>
+
+</manifest>
+
+<!--
+1.android:authorities
+
+It is just like a unique identifier , Basically Android System keeps a list of Providers and the
+Authority attribute helps to distinguish these providers . You can either use your package name
+as this attribute or  set the value as  ${applicationId}.  If you are using ${applicationId}
+then it automatically set project package name: ${applicationId}.myfileprovider as attribute value.
+
+2.android:exported
+
+This is the attribute which defines whether any other application can access the content
+provider or not. The default value for this attribute is TRUE. in order to control the access
+you have to set the attribute value as FALSE.
+
+3.android:grantUriPermissions:
+
+This attribute allows you to securely share your app’s internal storage to other applications,
+I.e This attribute defines a permission that controls both read and write access to the whole of
+the Content provider(storage space).Here we are specifying the permissions (read/write) that we
+enables to other applications .
+
+After that define a meta-data tag which define the path to the XML file ( xml file that we are
+going to create in the next step ) which contains all data paths that the FileProvider can share
+with external apps.
+-->

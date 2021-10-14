@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Business Cards</string>
+    <string name="label_business_card">Cartão de visita</string>
+    <string name="label_ok">OK</string>
+    <string name="label_close">Fechar</string>
+    <string name="label_share">Compartilhar</string>
+    <string name="label_save">Salvar</string>
+    <string name="label_cancel">Cancelar</string>
+    <string name="label_delete">Deletar</string>
+    <string name="label_update">Atualizar</string>
+    <string name="label_card_edit">Editar cartão</string>
+    <string name="label_card_create">Novo cartão</string>
+    <string name="label_card_details">Detalhes do cartão</string>
+    <string name="label_description_new_card">Novo cartão de visitas</string>
+    <string name="label_name">Nome</string>
+    <string name="label_phone">Telefone</string>
+    <string name="label_company">Empresa</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_background_color">Cor</string>
+    <string name="label_hint_name">Nome <font color='#FF0000'>*</font></string>
+    <string name="label_hint_phone">Telefone <font color='#FF0000'>*</font></string>
+    <string name="label_hint_company">Empresa <font color='#FF0000'>*</font></string>
+    <string name="label_hint_email">E-mail <font color='#FF0000'>*</font></string>
+    <string name="label_background_color_hint">Cor (Ex.: #AABBCC)</string>
+    <string name="label_show_success_insert">Cartão inserido com sucesso.</string>
+    <string name="label_show_success_update">Cartão atualizado com sucesso.</string>
+    <string name="label_share_to">Compartilhar</string>
+    <string name="label_message_advice">Aviso!</string>
+    <string name="label_message_error_empty_field">Um ou mais campos estão incompletos.</string>
+    <string name="label_message_card_image_captured_sucessfull">Imagem capturada com sucesso.</string>
+    <string name="label_message_card_delete">Deseja deletar este cartão permanentemente?</string>
+    <string name="label_message_card_deleted">Cartão deletado com sucesso.</string>
+</resources>
